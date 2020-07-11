@@ -1,4 +1,4 @@
-﻿<html>
+<html>
     <head>
         <title>
             ASA Yazılım
@@ -8,7 +8,8 @@
     <body>
         <div class="main">
             <div id="ss" class="ss">
-                <h1 class="font" id="one">S</h1>
+                <h1 class="font" id="one">Böyle bir sayfa bulunmuyor.</h1><br/>
+                <h1 class="font" id="two"><a href="/home">Ana sayfaya git.</a></h1>
             </div>
         </div>
         <div class="menu">
@@ -29,8 +30,9 @@
             var z = Math.round( Math.random() * 255 );
             var bg = "text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb("+x+", "+y+", "+z+"), 0 0 30px rgb("+x+", "+y+", "+z+"), 0 0 40px rgb("+x+", "+y+", "+z+"), 0 0 55px rgb("+x+", "+y+", "+z+"), 0 0 75px rgb("+x+", "+y+", "+z+");";
             var element = document.getElementById("one");
+            var element2 = document.getElementById("two");
             element.style = bg;
-            element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
+            element2.style = bg;
         }, 1000);
     </script>
 </html>
