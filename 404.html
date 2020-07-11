@@ -6,9 +6,9 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <div class="main">
+        <div id="error" class="main">
             <div id="ss" class="ss">
-                <h1 class="font" id="one">Böyle bir sayfa bulunmuyor.<a href="/home">Ana sayfaya git.</a></h1>
+                <h2 style="transition: 2s; font-size: 75; font-weight: bold;">Böyle bir sayfa bulunmuyor.<br/><br/><a href="/home">Ana sayfaya git.</a></h2>
             </div>
         </div>
         <div class="menu">
@@ -23,13 +23,8 @@
         </div>
     </body>
     <script>
-        setInterval(function(){
-            var x = Math.round( Math.random() * 255 );
-            var y = Math.round( Math.random() * 255 );
-            var z = Math.round( Math.random() * 255 );
-            var bg = "text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb("+x+", "+y+", "+z+"), 0 0 30px rgb("+x+", "+y+", "+z+"), 0 0 40px rgb("+x+", "+y+", "+z+"), 0 0 55px rgb("+x+", "+y+", "+z+"), 0 0 75px rgb("+x+", "+y+", "+z+");";
-            var element = document.getElementById("one");
-            element.style = bg;
-        }, 1000);
+        var error = document.getElementById("error")
+        error.style.zIndex = "0"
+        error.style.textShadow = "0 0 5px #FFF"
     </script>
 </html>
