@@ -1,0 +1,58 @@
+﻿<html>
+    <style>
+    @font-face {
+        font-family: "Asus Rog";
+        src: url("AsusRog-Regular.ttf") format("TrueType")
+    }
+
+    body {
+        background: black;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 150;
+        color: black;
+        margin: 15px;
+    }
+
+    .font {
+        font-family: "Asus Rog", Arial, sans-serif;
+        transition: 2s;
+    }
+
+    .main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+    }
+
+    .ss {
+        display: flex;
+    }
+
+    .sa {
+        display: flex;
+    }
+    </style>
+    <body>
+        <div class="main">
+            <div id="ss" class="ss">
+                <h1 class="font" id="one">S</h1>
+            </div>
+        <div>
+    </body>
+    <script>
+    setInterval(function(){
+var x = Math.round( Math.random() * 255 );
+var y = Math.round( Math.random() * 255 );
+var z = Math.round( Math.random() * 255 );
+var bg = "text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px rgb("+x+", "+y+", "+z+"), 0 0 30px rgb("+x+", "+y+", "+z+"), 0 0 40px rgb("+x+", "+y+", "+z+"), 0 0 55px rgb("+x+", "+y+", "+z+"), 0 0 75px rgb("+x+", "+y+", "+z+");";
+var element = document.getElementById("one");
+element.style = bg;
+element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
+}, 1000);
+    </script>
+</html>
