@@ -1,4 +1,4 @@
-﻿<html>
+<html>
     <head>
         <title>
             ASA Yazılım
@@ -7,15 +7,23 @@
     </head>
     <body>
         <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
+        <div id="projects">
+            <div>
+                <h3>ASA Recorder | Durum: %35 | Geliştirmeye ara verildi</h3><br/>Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.
+            </div>
+            <div>
+                <h3>ASA Home | Geliştirilmeye devam ediyor</h3><br/>Şuanda bulunduğunuz sitedir.
+            </div>
+        </div>
         <div class="menu">
             <ul>
-                <li style="background: #FF0000">
+                <li>
                     <a href="/home">Ana sayfa</a>
                 </li>
                 <li>
                     <a href="/home/hakkımızda.html">Hakkımızda</a>
                 </li>
-                <li>
+                <li style="background: #FF0000">
                     <a href="/home/projeler.html">Projelerimiz</a>
                 </li>
             </ul>
@@ -30,6 +38,14 @@
             var element = document.getElementById("one");
             element.style = bg;
             element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
-        }, 1000);
+        }, 1000)
+        setTimeout(() => {
+            var projects = $("#projects")
+            setTimeout(() => {
+                projects.css("animation", "rotate-center .6s ease-in-out both")
+                projects.css("-webkit-animation", "rotate-center .6s ease-in-out both")
+                projects.css("padding-left", "15px")
+            }, 1000)
+        }, 1000)
     </script>
 </html>
