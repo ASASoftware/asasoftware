@@ -41,7 +41,11 @@
         }, 1000);
         setTimeout(() => {
             var aboutus = document.getElementById("aboutus")
-            aboutus.style.padding = "15px"
+            setTimeout(() => {
+                aboutus.style.padding = "15px"
+                aboutus.style.animation = "rotate-center .6s ease-in-out both"
+                aboutus.style.webkitAnimation = "rotate-center .6s ease-in-out both"
+            }, 1000)
             var invite = document.getElementById("invite")
             invite.addEventListener("mouseenter", () => {
                 invite.style.color = "#FFFFFF90"
