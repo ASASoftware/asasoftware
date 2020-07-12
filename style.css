@@ -67,3 +67,21 @@ h1 {
 a {
     color: black;
 }
+
+.aboutus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    background: #30000050;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    transition: 2s;
+}
+
+.aboutus div {
+    margin: 15px;
+}

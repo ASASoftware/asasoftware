@@ -6,9 +6,16 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <div class="main">
-            <div id="ss" class="ss">
-                <h1 class="font" id="one">S</h1>
+        <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
+        <div id="aboutus" class="aboutus">
+            <div>
+                <h3>Discord sunucu linkimiz</h3><br/><a id="invite" style="color: white" href="https://discord.com/invite/abTSCKU" target="_blank">Tıkla</a>
+            </div>
+            <div>
+                <h3>Amacımız</h3><br/>Yazılım alanında kendini geliştirmek isteyen ve yaptıklarımızı kullanıp bize destek çıkmak isteyen insanlara en iyi şekilde hizmet etmek.
+            </div>
+            <div>
+                <h3>Projelerimizin ana yazarı</h3><br/>AxeTheKing#8346
             </div>
         </div>
         <div class="menu">
@@ -32,6 +39,16 @@
             element.style = bg;
             element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
         }, 1000);
+        setTimeout(() => {
+            var aboutus = document.getElementById("aboutus")
+            aboutus.style.padding = "15px"
+            var invite = document.getElementById("invite")
+            invite.addEventListener("mouseenter", () => {
+                invite.style.color = "#FFFFFF90"
+            })
+            invite.addEventListener("mouseleave", () => {
+                invite.style.color = "#FFF"
+            })
+        }, 1000)
     </script>
 </html>
- 
