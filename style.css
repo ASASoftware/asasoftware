@@ -42,7 +42,7 @@ h1 {
         transform: translate(-50%, -70%)
     }
     100% {
-        transform: rotate(0) translate(-50%, -50%)
+        transform: translate(-50%, -50%)
     }
 }
 
@@ -90,6 +90,9 @@ a {
     color: white;
     transition: 2s;
     padding-top: 15px;
+    -webkit-animation: rotate-center .6s ease-in-out both;
+    animation: rotate-center .6s ease-in-out both;
+    padding-left: 15px;
 }
 
 .aboutus div {
@@ -109,10 +112,40 @@ a {
     color: white;
     transition: 2s;
     padding-top: 15px;
+    -webkit-animation: rotate-center .6s ease-in-out both;
+    animation: rotate-center .6s ease-in-out both;
 }
 
 #projects div {
     border-left: 3px solid white;
     margin: 15px;
     padding-left: 5px;
+}
+
+#lang {
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    background: #FFFFFF30;
+    border-radius: 2px;
+}
+
+#lang img {
+    block-size: 11vh;
+}
+
+#lang ul {
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#lang ul li {
+    padding: 5px;
+    background: #00000020;
+    border-bottom: 1px solid #000;
 }

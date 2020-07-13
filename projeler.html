@@ -6,25 +6,36 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+        <div id="lang">
+            <img src="images/i.png"/>
+            <ul>
+                <li id="en">
+                    English
+                </li>
+                <li id="tr">
+                    Türkçe
+                </li>
+            </ul>
+        </div>
         <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
         <div id="projects">
             <div>
-                <h3>ASA Recorder | Durum: %35 | Geliştirmeye ara verildi</h3><br/>Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.
+                <h3 id="recorder">ASA Recorder | Durum: %35 | Geliştirmeye ara verildi</h3><br/><font id="recin">Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.</font>
             </div>
             <div>
-                <h3>ASA Home | Geliştirilmeye devam ediliyor</h3><br/>Şuanda bulunduğunuz sitedir.
+                <h3 id="asahome">ASA Home | Geliştirilmeye devam ediliyor</h3><br/><font id="asahomein">Şuanda bulunduğunuz sitedir.</font>
             </div>
         </div>
         <div class="menu">
             <ul>
                 <li>
-                    <a href="/home">Ana sayfa</a>
+                    <a id="home" href="/home">Ana sayfa</a>
                 </li>
                 <li>
-                    <a href="/home/hakkımızda.html">Hakkımızda</a>
+                    <a id="us" href="/home/hakkımızda.html">Hakkımızda</a>
                 </li>
                 <li style="background: #FF0000">
-                    <a href="/home/projeler.html">Projelerimiz</a>
+                    <a id="pr" href="/home/projeler.html">Projelerimiz</a>
                 </li>
             </ul>
         </div>
@@ -40,12 +51,60 @@
             element.style = bg;
             element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
         }, 1000)
-        setTimeout(() => {
-            var projects = $("#projects")
-            setTimeout(() => {
-                projects.css("animation", "rotate-center .6s ease-in-out both")
-                projects.css("-webkit-animation", "rotate-center .6s ease-in-out both")
-            }, 1000)
-        }, 1000)
+        var lang = $("#lang")
+        lang.on("click", () => {
+            if ($("#lang ul").css("display") == "none") {
+                $("#lang ul").css("display", "flex")
+            } else if ($("#lang ul").css("display") == "flex") {
+                $("#lang ul").css("display", "none")
+            }
+        })
+        var en = $("#en")
+        en.on("mouseenter", () => {
+            en.css("background", "#00000040")
+        })
+        en.on("mouseleave", () => {
+            en.css("background", "#00000020")
+        })
+        var tr = $("#tr")
+        tr.on("mouseenter", () => {
+            tr.css("background", "#00000040")
+        })
+        tr.on("mouseleave", () => {
+            tr.css("background", "#00000020")
+        })
+        var recorder = $("#recorder")
+        var asahome = $("#asahome")
+        var recin = $("#recin")
+        var asahomein = $("#asahomein")
+        if (window.localStorage.getItem("lang") == "en") {
+            $("#home").html("Home")
+            $("#us").html("About us")
+            $("#pr").html("Our projects")
+            recorder.html("ASA Recorder | Status 35% | Development interrupted")
+            recin.html("A simple-to-use app for taking screen record and shot.")
+            asahome.html("ASA Home | Under development")
+            asahomein.html("It is the site you are currently on.")
+        }
+        en.on("click", () => {
+            window.localStorage.setItem("lang", "en")
+            $("#home").html("Home")
+            $("#us").html("About us")
+            $("#pr").html("Our projects")
+            recorder.html("ASA Recorder | Status 35% | Development interrupted")
+            recin.html("A simple-to-use app for taking screen record and shot.")
+            asahome.html("ASA Home | Under development")
+            asahomein.html("It is the site you are currently on.")
+        })
+        tr.on("click", () => {
+            window.localStorage.setItem("lang", "tr")
+            $("#home").html("Ana sayfa")
+            $("#us").html("Hakkımızda")
+            $("#pr").html("Projelerimiz")
+            recorder.html("ASA Recorder | Durum: %35 | Geliştirmeye ara verildi")
+            recin.html("Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.")
+            asahome.html("ASA Home | Geliştirilmeye devam ediliyor")
+            asahomein.html("Şuanda bulunduğunuz sitedir.")
+        })
     </script>
 </html>

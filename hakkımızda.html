@@ -6,28 +6,39 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+        <div id="lang">
+            <img src="images/i.png"/>
+            <ul>
+                <li id="en">
+                    English
+                </li>
+                <li id="tr">
+                    Türkçe
+                </li>
+            </ul>
+        </div>
         <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
         <div id="aboutus" class="aboutus">
             <div>
-                <h3>Discord sunucu linkimiz</h3><br/><a id="invite" style="color: white" href="https://discord.com/invite/abTSCKU" target="_blank">Tıkla</a>
+                <h3 id="slink">Discord sunucu linkimiz</h3><br/><a id="invite" style="color: white" href="https://discord.com/invite/abTSCKU" target="_blank">Tıkla</a>
             </div>
             <div>
-                <h3>Amacımız</h3><br/>Yazılım alanında kendini geliştirmek isteyen ve yaptıklarımızı kullanıp bize destek çıkmak isteyen insanlara en iyi şekilde hizmet etmek.
+                <h3 id="purpose">Amacımız</h3><br/><font id="purin">Yazılım alanında kendini geliştirmek isteyen ve yaptıklarımızı kullanıp bize destek çıkmak isteyen insanlara en iyi şekilde hizmet etmek.</font>
             </div>
             <div>
-                <h3>Projelerimizin ana yazarı</h3><br/>AxeTheKing#8346
+                <h3 id="author">Projelerimizin ana yazarı</h3><br/>AxeTheKing#8346
             </div>
         </div>
         <div class="menu">
             <ul>
                 <li>
-                    <a href="/home">Ana sayfa</a>
+                    <a id="home" href="/home">Ana sayfa</a>
                 </li>
                 <li style="background: #FF0000">
-                    <a href="/home/hakkımızda.html">Hakkımızda</a>
+                    <a id="us" href="/home/hakkımızda.html">Hakkımızda</a>
                 </li>
                 <li>
-                    <a href="/home/projeler.html">Projelerimiz</a>
+                    <a id="pr" href="/home/projeler.html">Projelerimiz</a>
                 </li>
             </ul>
         </div>
@@ -43,20 +54,73 @@
             element.style = bg;
             element.style.transform = `rotate(${Math.round(  Math.random() * 2000 )}deg)`
         }, 1000);
-        setTimeout(() => {
-            var aboutus = $("#aboutus")
-            setTimeout(() => {
-                aboutus.css("animation", "rotate-center .6s ease-in-out both")
-                aboutus.css("-webkit-animation", "rotate-center .6s ease-in-out both")
-                aboutus.css("padding-left", "15px")
-            }, 1000)
-            var invite = $("#invite")
-            $("#invite").on("mouseenter", function() {
-                invite.css("color", "#FFFFFF90")
-            })
-            $("#invite").on("mouseleave", function() {
-                invite.css("color", "#FFF")
-            })
-        }, 1000)
+        var invite = $("#invite")
+        $("#invite").on("mouseenter", function() {
+            invite.css("color", "#FFFFFF90")
+        })
+        $("#invite").on("mouseleave", function() {
+            invite.css("color", "#FFF")
+        })
+        var lang = $("#lang")
+        lang.on("click", () => {
+            if ($("#lang ul").css("display") == "none") {
+                $("#lang ul").css("display", "flex")
+            } else if ($("#lang ul").css("display") == "flex") {
+                $("#lang ul").css("display", "none")
+            }
+        })
+        var en = $("#en")
+        en.on("mouseenter", () => {
+            en.css("background", "#00000040")
+        })
+        en.on("mouseleave", () => {
+            en.css("background", "#00000020")
+        })
+        var tr = $("#tr")
+        tr.on("mouseenter", () => {
+            tr.css("background", "#00000040")
+        })
+        tr.on("mouseleave", () => {
+            tr.css("background", "#00000020")
+        })
+        var slink = $("#slink")
+        var home = $("#home")
+        var us = $("#us")
+        var pr = $("#pr")
+        var pur = $("#purpose")
+        var purin = $("#purin")
+        var author = $("#author")
+        if (window.localStorage.getItem("lang") == "en") {
+            home.html("Home")
+            us.html("About us")
+            pr.html("Our projects")
+            slink.html("Our discord server link")
+            invite.html("Click me")
+            pur.html("Our purpose")
+            purin.html("To serve the people who want to improve themselves in the software field and who want to support us by using what we do.")
+            author.html("The main author of our projects")
+        }
+        en.on("click", () => {
+            window.localStorage.setItem("lang", "en")
+            home.html("Home")
+            us.html("About us")
+            pr.html("Our projects")
+            slink.html("Our discord server link")
+            invite.html("Click me")
+            pur.html("Our purpose")
+            purin.html("To serve the people who want to improve themselves in the software field and who want to support us by using what we do.")
+            author.html("The main author of our projects")
+        })
+        tr.on("click", () => {
+            window.localStorage.setItem("lang", "tr")
+            home.html("Ana sayfa")
+            us.html("Hakkımızda")
+            pr.html("Projelerimiz")
+            slink.html("Discord sunucu linkimiz")
+            invite.html("Tıkla")
+            pur.html("Amacımız")
+            purin.html("Yazılım alanında kendini geliştirmek isteyen ve yaptıklarımızı kullanıp bize destek çıkmak isteyen insanlara en iyi şekilde hizmet etmek.")
+            author.html("Projelerimizin ana yazarı")
+        })
     </script>
 </html>
