@@ -10,6 +10,7 @@
     outline: none;
     -webkit-box-sizing: inherit;
     box-sizing: border-box;
+    cursor: default;
 }
 
 body {
@@ -148,4 +149,38 @@ a {
     padding: 5px;
     background: #00000020;
     border-bottom: 1px solid #000;
+}
+
+.leftbar {
+    left: 0;
+    height: 100%;
+    width: 15%;
+    background: black;
+    border-right: 1px solid white;
+    color: white;
+}
+
+.leftbar ul {
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.leftbar ul li {
+    padding: 5px;
+    padding-left: 10px;
+    background: #FFFFFF15;
+    border-bottom: 1px solid white;    
+}
+
+.lbtoggle {
+    left: 15%;
+    top: 50%;
+    position: absolute;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transform: translate(-5%, -50%);
+    cursor: hand;
 }
