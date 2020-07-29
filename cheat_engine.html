@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            ASA Yazılım
+        </title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div id="lang">
+            <img src="https://asasoftware.github.io/home/images/i.png"/>
+            <ul>
+                <li id="en">
+                    English
+                </li>
+                <li id="tr">
+                    Türkçe
+                </li>
+            </ul>
+        </div>
+        <div class="ce-inf">
+            <h2>Cheat engine nasıl fixlenir?</h2><br/>
+            <h3>Bize lazım olanlar,<br/><br/><ul><li>Cheat engine setup</li><li>Fixed cheat engine</li></ul><br/>
+            Eğer cheat engine yüklüyse sadece fixed cheat engine kurman yeterli olacak.<br/>
+            Öncelikle bilgisayarımızda cheat engine yüklü değilse sitesinden indiriyoruz.<br/>
+            Ve ya burdan indirebilirsiniz: <a href="https://asasoftware.github.io/home/cheatengine67.exe">Cheat engine 6.7</a><br/><br/>
+            İndirdiğiniz setup'u kurduktan sonra fixed cheat engine'yi indirin: <a href="https://asasoftware.github.io/home/fixed%20cheat%20engine.rar">Fixed cheat engine</a><br/><br/>
+            Bunuda indirdikten sonra kurmuş olduğunuz cheat engine'nin dosya konumuna gidip orda bulunan bütün dosyaları silin.<br/><br/>
+            Ardından fixed cheat engine.rar'ın içindekileri oraya atın, çıkarttığınızda klasör halinde ise içindekileri oraya atıp klasörü silin.<br/><br/>
+            Artık cheat engine'yi açtığınızda fixed olarak açılacak ve oyun onu göremeyecektir.
+            </h3>
+        </div>
+        <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a id="home" href="/home">Ana sayfa</a>
+                </li>
+                <li>
+                    <a id="us" href="/home/hakkımızda.html">Hakkımızda</a>
+                </li>
+                <li>
+                    <a id="pr" href="/home/projeler.html">Projelerimiz</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var ceinf = $(".ce-inf")
+        var ceinfh2 = $(".ce-inf h2")
+        var ceinfh3 = $(".ce-inf h3")
+        var ceinfa = $(".ce-inf a")
+        
+        setTimeout(() => {
+            ceinfh2.css("color", "#FFF")
+            ceinfh3.css("color", "#FFFFFFF0")
+            ceinfa.css("color", "#FF2020")
+            ceinfa.css("cursor", "hand")
+
+        }, 1000)
+    </script>
+</html>

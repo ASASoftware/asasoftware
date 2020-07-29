@@ -16,7 +16,7 @@
 body {
     font-family: Whitney, Helvetica Neue,Helvetica,Arial,sans-serif;
     background: black;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -183,4 +183,60 @@ a {
     padding-bottom: 15px;
     transform: translate(-5%, -50%);
     cursor: hand;
+}
+
+.copy {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    margin: 0;
+    background: #FFFFFF20;
+    border-radius: 3px;
+}
+
+.code {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #30000050;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    transition: 2s;
+    -webkit-animation: rotate-center .6s ease-in-out both;
+    animation: rotate-center .6s ease-in-out both;
+}
+
+.code div {
+    margin: 15px;
+}
+
+.ce-inf {
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #90909015;
+    border-left: 1px solid #90909030;
+    border-right: 1px solid #90909030;
+    padding: 4%;
+}
+
+.ce-inf h2 {
+    text-align: center;
+}
+
+/*
+    Mobile support
+
+    Global (index.html contents)
+*/
+@media only screen and (max-width: 600px) {
+    .menu ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
