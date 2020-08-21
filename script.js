@@ -2,6 +2,8 @@
 //  index.html
 //
 var cs = $(".cs")
+var gtmwnaf = $(".gtmwnaf")
+var fce = $(".fce")
 var html = $(".html")
 var js = $(".js")
 var cmd = $(".cmd")
@@ -10,6 +12,12 @@ var mtals = $(".mtals")
 cs.on("click", () => { window.location.href = "/home/cs.html" })
 cs.on("mouseenter", () => { cs.css("background", "#FFFFFF30") })
 cs.on("mouseleave", () => { cs.css("background", "#FFFFFF15") })
+gtmwnaf.on("click", () => { window.location.href = "/home/gtmwnaf.html" })
+gtmwnaf.on("mouseenter", () => { gtmwnaf.css("background", "#FFFFFF30") })
+gtmwnaf.on("mouseleave", () => { gtmwnaf.css("background", "#FFFFFF15") })
+fce.on("click", () => { window.location.href = "/home/cheat_engine.html" })
+fce.on("mouseenter", () => { fce.css("background", "#FFFFFF30") })
+fce.on("mouseleave", () => { fce.css("background", "#FFFFFF15") })
 html.on("mouseenter", () => { html.css("background", "#FFFFFF30") })
 html.on("mouseleave", () => { html.css("background", "#FFFFFF15") })
 js.on("mouseenter", () => { js.css("background", "#FFFFFF30") })
@@ -57,3 +65,7 @@ function CopyToClipboard(containerid) {
       window.getSelection().removeRange(range);
     }
 }
+//
+// Intervals
+//
+setInterval(() => { window.getSelection().removeAllRanges() }, 0)

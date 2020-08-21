@@ -18,16 +18,16 @@
             </ul>
         </div>
         <div class="ce-inf">
-            <h2>Cheat engine nasıl fixlenir?</h2><br/>
-            <h3>Bize lazım olanlar,<br/><br/><ul><li>Cheat engine setup</li><li>Fixed cheat engine</li></ul><br/>
-            Eğer cheat engine yüklüyse sadece fixed cheat engine kurman yeterli olacak.<br/>
+            <h2 class="title-1">Cheat engine nasıl fixlenir?</h2><br/>
+            <h3 class="desc-1">Bize lazım olanlar,<br/><br/></h3>
+            <ul><li>Cheat engine setup</li><li>Fixed cheat engine</li></ul><br/>
+            <h3 class="desc-2">Eğer cheat engine yüklüyse sadece fixed cheat engine kurman yeterli olacak.<br/>
             Öncelikle bilgisayarımızda cheat engine yüklü değilse sitesinden indiriyoruz.<br/>
-            Ve ya burdan indirebilirsiniz: <a href="https://github.com/ASASoftware/home/blob/gh-pages/CheatEngine67.exe?raw=true">Cheat engine 6.7</a><br/><br/>
-            İndirdiğiniz setup'u kurduktan sonra fixed cheat engine'yi indirin: <a href="https://github.com/ASASoftware/home/blob/gh-pages/Fixed%20cheat%20engine.rar?raw=true">Fixed cheat engine</a><br/><br/>
-            Bunuda indirdikten sonra kurmuş olduğunuz cheat engine'nin dosya konumuna gidip orda bulunan bütün dosyaları silin.<br/><br/>
+            Ve ya burdan indirebilirsiniz: </h3><a href="https://github.com/ASASoftware/home/blob/gh-pages/CheatEngine67.exe?raw=true">Cheat engine 6.7</a><br/><br/>
+            <h3 class="desc-3">İndirdiğiniz setup'u kurduktan sonra fixed cheat engine'yi indirin: </h3><a href="https://github.com/ASASoftware/home/blob/gh-pages/Fixed%20cheat%20engine.rar?raw=true">Fixed cheat engine</a><br/><br/>
+            <h3 class="desc-4">Bunuda indirdikten sonra kurmuş olduğunuz cheat engine'nin dosya konumuna gidip orda bulunan bütün dosyaları silin.<br/><br/>
             Ardından fixed cheat engine.rar'ın içindekileri oraya atın, çıkarttığınızda klasör halinde ise içindekileri oraya atıp klasörü silin.<br/><br/>
-            Artık cheat engine'yi açtığınızda fixed olarak açılacak ve oyun onu göremeyecektir.
-            </h3>
+            Artık cheat engine'yi açtığınızda fixed olarak açılacak ve oyun onu göremeyecektir.</h3>
         </div>
         <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
         <div class="menu">
@@ -57,7 +57,36 @@
             ceinfh3.css("color", "#FFFFFFF0")
             ceinfa.css("color", "#FF2020")
             ceinfa.css("cursor", "hand")
-
+            $(".ce-inf ul").css("color", "#FFF")
         }, 1000)
+
+        var title1 = $(".title-1")
+        var desc1 = $(".desc-1")
+        var desc2 = $(".desc-2")
+        var desc3 = $(".desc-3")
+        var desc4 = $(".desc-4")
+
+        // default türkçe olduğu için ek bir koşul'a gerek yok
+        if (window.localStorage.getItem("lang") == "en") {
+            title1.html("How to fix the cheat engine?")
+            desc1.html("What we need,<br/><br/>")
+            desc2.html("If cheat engine was downloaded to your computer just download fixed cheat engine.rar and follow the steps.<br/>If not downloaded you can download from here:")
+            desc3.html("After download and setup the official cheat engine, download the fixed cheat engine: ")
+            desc4.html("When ok, go setupped cheat engine path and delete everything in it. Extract fixed cheat engine.rar to where you deleted all files<br/><br/>Anymore when you open cheat engine there is no warning in game. ;)")
+        }
+        $("#en").on("click", () => {
+            title1.html("How to fix the cheat engine?")
+            desc1.html("What we need,<br/><br/>")
+            desc2.html("If cheat engine was downloaded to your computer just download fixed cheat engine.rar and follow the steps.<br/>If not downloaded you can download from here:")
+            desc3.html("After download and setup the official cheat engine, download the fixed cheat engine: ")
+            desc4.html("When ok, go setupped cheat engine path and delete everything in it. Extract fixed cheat engine.rar to where you deleted all files<br/><br/>Anymore when you open cheat engine there is no warning in game. ;)")
+        })
+        $("#tr").on("click", () => {
+            title1.html("Cheat engine nasıl fixlenir?")
+            desc1.html("Bize lazım olanlar,<br/><br/>")
+            desc2.html("Eğer cheat engine yüklüyse sadece fixed cheat engine kurman yeterli olacak.<br/>Öncelikle bilgisayarımızda cheat engine yüklü değilse sitesinden indiriyoruz.<br/>Ve ya burdan indirebilirsiniz: ")
+            desc3.html("İndirdiğiniz setup'u kurduktan sonra fixed cheat engine'yi indirin: ")
+            desc4.html("Bunuda indirdikten sonra kurmuş olduğunuz cheat engine'nin dosya konumuna gidip orda bulunan bütün dosyaları silin.<br/><br/>Ardından fixed cheat engine.rar'ın içindekileri oraya atın, çıkarttığınızda klasör halinde ise içindekileri oraya atıp klasörü silin.<br/><br/>Artık cheat engine'yi açtığınızda fixed olarak açılacak ve oyun onu göremeyecektir.")
+        })
     </script>
 </html>
