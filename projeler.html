@@ -20,10 +20,13 @@
         <div class="main"><div id="ss" class="ss"><h1 class="font" id="one">S</h1></div></div>
         <div id="projects">
             <div>
-                <h3 id="recorder">ASA Recorder | Durum: %35 | Geliştirmeye ara verildi</h3><br/><font id="recin">Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.</font>
+                <h3 id="recorder">ASA Recorder | Durum: %35 | Geliştirilmesi bırakıldı</h3><br/><font id="recin">Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.</font>
             </div>
             <div>
                 <h3 id="asahome">ASA Home | Geliştirilmeye devam ediliyor</h3><br/><font id="asahomein">Şuanda bulunduğunuz sitedir.</font>
+            </div>
+            <div>
+                <h3 id="gtbp">GTBP | Kullanılabilir durumda</h3><br/><font id="gtbpf">Growtopia birliği özel programı</font>
             </div>
         </div>
         <div class="menu">
@@ -47,23 +50,31 @@
         var asahome = $("#asahome")
         var recin = $("#recin")
         var asahomein = $("#asahomein")
+        var gtbp = $("#gtbp")
+        var gtbpf = $("#gtbpf")
         if (window.localStorage.getItem("lang") == "en") {
             recorder.html("ASA Recorder | Status 35% | Development interrupted")
             recin.html("A simple-to-use app for taking screen record and shot.")
             asahome.html("ASA Home | Under development")
             asahomein.html("It is the site you are currently on.")
+            gtbp.html("GTBP | Usable")
+            gtbpf.html("Growtopia birliği's special application")
         }
         $("#en").on("click", () => {
             recorder.html("ASA Recorder | Status 35% | Development interrupted")
             recin.html("A simple-to-use app for taking screen record and shot.")
             asahome.html("ASA Home | Under development")
             asahomein.html("It is the site you are currently on.")
+            gtbp.html("GTBP | Usable")
+            gtbpf.html("Growtopia birliği's special application")
         })
         $("#tr").on("click", () => {
-            recorder.html("ASA Recorder | Durum: %35 | Geliştirmeye ara verildi")
+            recorder.html("ASA Recorder | Durum: %35 | Geliştirilmesi bırakıldı")
             recin.html("Ekran kaydı ve fotoğrafı almak için basit kullanımlı bir uygulama.")
             asahome.html("ASA Home | Geliştirilmeye devam ediliyor")
             asahomein.html("Şuanda bulunduğunuz sitedir.")
+            gtbp.html("GTBP | Kullanılabilir durumda")
+            gtbpf.html("Growtopia birliği özel programı")
         })
     </script>
 </html>
